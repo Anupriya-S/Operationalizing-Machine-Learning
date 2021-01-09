@@ -16,7 +16,7 @@ The first part of the project is basically creating, deploying and consuming a m
 
 ![Part_1](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Architectural%20Diagrams/Real_Time_Scoring.jpg)
 
-In the second part of the project we are creating, publishing and consuming a pipeline using Azure SDK. The following image somehow describes the netire process and even more.
+In the second part of the project we are creating, publishing and consuming a pipeline using Azure SDK. The following image somehow describes the entire process and even more.
 
 ![Part_2](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Architectural%20Diagrams/MLOps_in_Azure.png)
 
@@ -138,7 +138,7 @@ This call creates another file in the root directory, `data.json`.
 
 
 ## Screen Recording
-Here is the link to the screencast demostrating the entire working of how we can Operationalize Machine Learning using Azure ML platform.
+Here is the link to the screencast demonstrating the entire working of how we can Operationalize Machine Learning using Azure ML platform.
 
 [Let's go to the screencast!](https://youtu.be/BXZeRN934_8 "Screencast Demonstrating Operationalizing Machine Learning")
 
