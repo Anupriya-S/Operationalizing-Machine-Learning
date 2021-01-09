@@ -44,6 +44,17 @@ As we can see, the best model found by AutoML is Voting Ensemble.
 5. Next we will enable *Application Insights* to retrieve logs whenever needed. For this step we will run `logs.py` in the terminal as shown in the following screenshot. This is retrieving some logs also for us.
 As a result, *Endpoint* section in Azure ML studio is showing *Applications Insights* as ***True***.
 This is the dashboard of *Application Insights* which makes analysis way easier.
+6. Swagger UI running on the localhost showing the HTTP API methods and responses for the model.
+7. The following screenshot shows the *Consume* tab of the deployed model with the key for the service and the URI that was generated after deployment.
+8. Here we can see the file `endpoint.py` running in the terminal against the API producing JSON output from the model. This call creates another file in the root directory, `data.json`.
+9. This step will benchmark the endpoint using Apache Benchmark (ab). `benchmark.sh` contains one line of `ab`. The following screenshot shows Apache Benchmark (ab) running against the HTTP API using authentication keys to retrieve performance results.
+10. For this part of the project, you will use the Jupyter Notebook provided in the starter files. This following screenshot shows the *Run Details Widget* with AutoML steps from the notebook.
+11. Make sure that the pipeline is created by checking out the *Pipeline* section in the studio.
+12. This is the pipeline structure showing Bankmarketing dataset with the AutoML module.
+13. We used the following piece of code from the notebook for publishing the pipeline.
+14. The *Published Pipeline overview*, showing a REST endpoint and a status of ACTIVE meaning our pipeline has been published successfully and ready to use.
+15. The following piece of code from the notebook demonstrates how we can send a POST request to trigger the pipeline published in the previous step.
+16. Azure ML studio showing the pipeline endpoint as *ACTIVE*.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
