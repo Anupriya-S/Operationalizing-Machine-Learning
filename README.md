@@ -9,25 +9,25 @@ The dataset used here contains contextual information of some of the clients of 
 *TODO*: Provide an architectual diagram of the project and give an introduction of each step.
 In this project, we will be following the below main steps:
 
-#### 1. Authentication
+### 1. Authentication
 In this step, we will need to install the Azure Machine Learning Extension which allows us to interact with Azure Machine Learning Studio, part of the az command. After having the Azure machine Learning Extension, we will create a Service Principal account and associate it with our specific workspace.
 
-#### 2. Automated ML Experiment
+### 2. Automated ML Experiment
 In this step, we will create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment.
 
-#### 3. Deploy the best model
+### 3. Deploy the best model
 After the experiment run completes, a summary of all the models and their metrics are shown, including explanations. The *Best Model* will be shown in the *Details* tab. We will select this best model for deployment.
 
-#### 4. Enable logging
+### 4. Enable logging
 Now that the *Best Model* is deployed, we will enable Application Insights and retrieve logs. Application Insights is a very useful tool to detect anomalies, visualize performance. It can be enabled before or after a deployment. However, in this project, we will enable it after the deployment.
 
-#### 5. Swagger Documentation
+### 5. Swagger Documentation
 Swagger is a tool that helps build, document, and consume RESTful web services like the ones we are deploying in Azure ML Studio. It further explains what types of HTTP requests that an API can consume, like POST and GET. In this step, you will consume the deployed model using Swagger. Azure provides a Swagger JSON file for deployed models.
 
-#### 6. Consume model endpoints
+### 6. Consume model endpoints
 We can consume a deployed service via an HTTP API. An HTTP API is a URL that is exposed over the network so that interaction with a trained model can happen via HTTP requests. We can initiate an input request, usually via an HTTP POST request. Once the model is deployed, we will use the script provided to interact with the trained model that contains the required piece of code for initiating an input request.
 
-#### 7. Create, publish and consume a pipeline
+### 7. Create, publish and consume a pipeline
 Automation is a core pillar of DevOps applicable to Machine Learning operations. A good feature of Azure is Pipelines, and these are closely related to automation. For this part of the project, we will use the Jupyter Notebook provided in the starter files for creating, publishing, and consuming a pipeline.
 
 ## Key Steps
@@ -41,7 +41,7 @@ As you follow there is a list of all the key steps of this project alongwith the
 As we can see, the best model found by AutoML is Voting Ensemble.
 3. To deploy this newly trained model we need to fill the *Deployment form* as shown in the following screenshot. Make sure the *Authentication* is enabled.
 4. After deployment, make sure the *Deployment state* is *Healthy* in the studio.
-5. Next we will enable *Application Insights* to retrieve logs whenever needed. For this step we will run 'logs.py' in the terminal as shown in the following screenshot. This is retrieving some logs also for us.
+5. Next we will enable *Application Insights* to retrieve logs whenever needed. For this step we will run `logs.py` in the terminal as shown in the following screenshot. This is retrieving some logs also for us.
 As a result, *Endpoint* section in Azure ML studio is showing *Applications Insights* as ***True***.
 This is the dashboard of *Application Insights* which makes analysis way easier.
 
