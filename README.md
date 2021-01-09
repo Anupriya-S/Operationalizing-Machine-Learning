@@ -31,12 +31,12 @@ We can consume a deployed service via an HTTP API. An HTTP API is a URL that is 
 Automation is a core pillar of DevOps applicable to Machine Learning operations. A good feature of Azure is Pipelines, and these are closely related to automation. For this part of the project, we will use the Jupyter Notebook provided in the starter files for creating, publishing, and consuming a pipeline.
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screencasts required to demonstrate key steps. 
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-As you follow there is a list of all the key steps of this project alongwith the required screenshots. Screenshots are included to provide clarity.
+As you follow, there is a list of all the key steps of this project alongwith the required screenshots. Screenshots are included to provide clarity.
 
 1. Register the required dataset and make sure it is present in the *Registered Dataset* section.
+
+![Step_1](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Dataset_Registered.png)
+
 2. Create a new Automated ML run and experiment and configure it as a *Classification* task. Wait till it gets completed. It will take 30-40 minutes for this run to complete.
 As we can see, the best model found by AutoML is Voting Ensemble.
 3. To deploy this newly trained model we need to fill the *Deployment form* as shown in the following screenshot. Make sure the *Authentication* is enabled.
