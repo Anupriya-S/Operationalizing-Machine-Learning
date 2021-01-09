@@ -6,7 +6,8 @@ This project is part of the Udacity Azure ML Nanodegree. In this project, we wil
 The dataset used here contains contextual information of some of the clients of a bank such as age, job, marital status, education, housing status, loan status, etc. Using this dataset, we seek to predict the reaction of the clients (positive or negative) to a marketing campaign ran by the bank.
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step.
+Overall workflow can be described with the help of following diagram.
+On a high level, this project is divided into two parts and that's why I will be presenting two architechtural diagrams as follows.
 In this project, we will be following the below main steps:
 
 ### 1. Authentication
@@ -38,23 +39,91 @@ As you follow, there is a list of all the key steps of this project alongwith th
 ![Step_1](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Dataset_Registered.png)
 
 2. Create a new Automated ML run and experiment and configure it as a *Classification* task. Wait till it gets completed. It will take 30-40 minutes for this run to complete.
+
+![Step_2](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Completed_AutoML_Run.png)
+
 As we can see, the best model found by AutoML is Voting Ensemble.
+
+![Step_3](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Best_AutoML_Model.png)
+
 3. To deploy this newly trained model we need to fill the *Deployment form* as shown in the following screenshot. Make sure the *Authentication* is enabled.
+
+![Step_4](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Deployment_Form.png)
+
 4. After deployment, make sure the *Deployment state* is *Healthy* in the studio.
+
+![Step_5](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Healthy_Deployment_State.png)
+
 5. Next we will enable *Application Insights* to retrieve logs whenever needed. For this step we will run `logs.py` in the terminal as shown in the following screenshot. This is retrieving some logs also for us.
+
+![Step_6](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Ruunig_logspy_in_Terminal.png)
+
 As a result, *Endpoint* section in Azure ML studio is showing *Applications Insights* as ***True***.
+
+![Step_7](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Application_Insights_True.png)
+
 This is the dashboard of *Application Insights* which makes analysis way easier.
+
+![Step_8](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Application_Insights_Dashboard.png)
+
 6. Swagger UI running on the localhost showing the HTTP API methods and responses for the model.
+
+![Step_9](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Swagger_UI_1.png)
+
+![Step_10](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Swagger_UI_2.png)
+
+![Step_11](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Swagger_UI_3.png)
+
 7. The following screenshot shows the *Consume* tab of the deployed model with the key for the service and the URI that was generated after deployment.
-8. Here we can see the file `endpoint.py` running in the terminal against the API producing JSON output from the model. This call creates another file in the root directory, `data.json`.
+
+![Step_12](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/REST_Endpoint_and_Key.png)
+
+8. Here we can see the file `endpoint.py` running in the terminal against the API producing JSON output from the model.
+
+![Step_13](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Running_endpointpy_in_Terminal.png)
+
+This call creates another file in the root directory, `data.json`.
+
+![Step_14](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Data_JSON_Created.png)
+
 9. This step will benchmark the endpoint using Apache Benchmark (ab). `benchmark.sh` contains one line of `ab`. The following screenshot shows Apache Benchmark (ab) running against the HTTP API using authentication keys to retrieve performance results.
+
+![Step_15](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Benchmark_SH_Running_in_Terminal.png)
+
 10. For this part of the project, you will use the Jupyter Notebook provided in the starter files. This following screenshot shows the *Run Details Widget* with AutoML steps from the notebook.
+
+![Step_16](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Create_Pipeline_1.png)
+
+![Step_17](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Create_Pipeline_2.png)
+
 11. Make sure that the pipeline is created by checking out the *Pipeline* section in the studio.
+
+![Step_18](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Created_Pipeline_Studio.png)
+
 12. This is the pipeline structure showing Bankmarketing dataset with the AutoML module.
+
+![Step_19](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Pipeline_Graph.png)
+
 13. We used the following piece of code from the notebook for publishing the pipeline.
+
+![Step_20](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Publish_Pipeline.png)
+
 14. The *Published Pipeline overview*, showing a REST endpoint and a status of ACTIVE meaning our pipeline has been published successfully and ready to use.
+
+![Step_21](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Published_Pipeline_Endpoint.png)
+
 15. The following piece of code from the notebook demonstrates how we can send a POST request to trigger the pipeline published in the previous step.
+
+![Step_22](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Sending_POST_Request.png)
+
 16. Azure ML studio showing the pipeline endpoint as *ACTIVE*.
+
+![Step_23](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Pipeline_Endpoint_ACTIVE.png)
+
+17. Azure ML studio showing a completed run executed as a result of triggering the published pipeline through a POST request as shown in the previous step.
+
+![Step_24](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Submitted_Pipeline_Run.png)
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
