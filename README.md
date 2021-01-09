@@ -7,8 +7,20 @@ The dataset used here contains contextual information of some of the clients of 
 
 ## Architectural Diagram
 Overall workflow can be described with the help of following diagram.
+
+![Overall_Workflow](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Architectural%20Diagrams/Architectural_Diagram.png)
+
 On a high level, this project is divided into two parts and that's why I will be presenting two architechtural diagrams as follows.
-In this project, we will be following the below main steps:
+
+The first part of the project is basically creating, deploying and consuming a model. The following image shows the part where we are ineteracting with a deployed service.
+
+![Part_1](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Architectural%20Diagrams/Real_Time_Scoring.jpg)
+
+In the second part of the project we are creating, publishing and consuming a pipeline using Azure SDK. The following image somehow describes the netire process and even more.
+
+![Part_2](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Architectural%20Diagrams/MLOps_in_Azure.png)
+
+***In this project, we will be following the below main steps:***
 
 ### 1. Authentication
 In this step, we will need to install the Azure Machine Learning Extension which allows us to interact with Azure Machine Learning Studio, part of the az command. After having the Azure machine Learning Extension, we will create a Service Principal account and associate it with our specific workspace.
@@ -126,7 +138,14 @@ This call creates another file in the root directory, `data.json`.
 
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+Here is the link to the screencast demostrating the entire working of how we can Operationalize Machine Learning using Azure ML platform.
+
+[Let's go to the screencast!](https://youtu.be/BXZeRN934_8 "Screencast Demonstrating Operationalizing Machine Learning")
 
 ## Future Work
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+No matter what, we can always improvise one way or the other. I uderstand that the end goal of this project is not to find the most optimized model but to automate the process of training such models and to interact with such models. However, I have some suggestions that we can try to achieve better results in terms of the accuracy of the trained model.
+
+1. Dataset should be balanced before feeding it to the model for getting better results.
+2. While configuring the AutoML run, we can increase the time limit in the *Exit Criterion* so that more possibilities can be explored.
+
+This obviously is not the limit and there must be more ways to improvise the above workflow.
