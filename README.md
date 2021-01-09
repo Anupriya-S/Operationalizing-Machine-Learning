@@ -34,6 +34,16 @@ Automation is a core pillar of DevOps applicable to Machine Learning operations.
 *TODO*: Write a short discription of the key steps. Remeber to include all the screencasts required to demonstrate key steps. 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+As you follow there is a list of all the key steps of this project alongwith the required screenshots. Screenshots are included to provide clarity.
+
+1. Register the required dataset and make sure it is present in the *Registered Dataset* section.
+2. Create a new Automated ML run and experiment and configure it as a *Classification* task. Wait till it gets completed. It will take 30-40 minutes for this run to complete.
+As we can see, the best model found by AutoML is Voting Ensemble.
+3. To deploy this newly trained model we need to fill the *Deployment form* as shown in the following screenshot. Make sure the *Authentication* is enabled.
+4. After deployment, make sure the *Deployment state* is *Healthy* in the studio.
+5. Next we will enable *Application Insights* to retrieve logs whenever needed. For this step we will run 'logs.py' in the terminal as shown in the following screenshot. This is retrieving some logs also for us.
+As a result, *Endpoint* section in Azure ML studio is showing *Applications Insights* as ***True***.
+This is the dashboard of *Application Insights* which makes analysis way easier.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
