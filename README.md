@@ -1,9 +1,15 @@
 
 # Operationalizing Machine Learning
 
-This project is part of the Udacity Azure ML Nanodegree. In this project, we will use Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We will also create, publish, and consume a pipeline. In the end, we will demonstrate all of your work by creating a screencast video.
+This project is part of the Udacity Azure ML Nanodegree. In this project, we will be using Azure to configure a cloud-based machine learning production model, deploy it, and consume it. We will also create, publish, and consume a pipeline. In the end, we will demonstrate all of our work by creating a screencast video.
 
-The dataset used here contains contextual information of some of the clients of a bank such as age, job, marital status, education, housing status, loan status, etc. Using this dataset, we seek to predict the reaction of the clients (positive or negative) to a marketing campaign ran by the bank.
+The dataset used here contains contextual information of some of the clients of a bank such as age, job, marital status, education, housing status, loan status, etc. Using this dataset, we seek to predict the reaction of the clients (positive or negative) to a marketing campaign ran by the bank. This makes it a two-class classification problem.
+
+We will start with configuring a model with the help of AutoML because its easy, saves time, and we get great accuracy. Then we will deploy this model using Azure Container Instances (ACI). Deploying the model will generate an HTTP endpoint that fecilitates interating with the deployed service from almost anywhere. Azure provides a `swagger.json` file that is used to create a web site that documents the HTTP endpoint for a deployed model. We are going to leverage this feature and make our life simpler. Using this documentation we will load test our model. We can even create a benchmark for the performance of the deployed service.
+
+The next part is all about pipeline automation. A great way to automate workflows is via Pipelines. Published pipelines allow external services to interact with them so that they can do work more efficiently. To be precise, we will be using AutoML steps for creating the pipeline. Once the pipeline is successfully created then we will publish it and interact with it through the Python SDK.
+
+Both the Azure ML Studio and the Python SDK will be used in this project.
 
 ## Architectural Diagram
 Overall workflow can be described with the help of following diagram.
@@ -147,5 +153,6 @@ No matter what, we can always improvise one way or the other. I uderstand that t
 
 1. Dataset should be balanced before feeding it to the model for getting better results.
 2. While configuring the AutoML run, we can increase the time limit in the *Exit Criterion* so that more possibilities can be explored.
+3. We can also try our hand on deep learning capabilities.
 
 This obviously is not the limit and there must be more ways to improvise the above workflow.
