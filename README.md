@@ -140,7 +140,7 @@ This call creates another file in the root directory, `data.json`.
 
 17. Azure ML studio showing a completed run executed as a result of triggering the published pipeline through a POST request as shown in the previous step.
 
-![Step_24](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Submitted_Pipeline_Run.png)
+![Step_24](https://github.com/Anupriya-S/Operationalizing-Machine-Learning/blob/main/Screenshots/Submitted_Pipeline_Run.jpg)
 
 
 ## Screen Recording
